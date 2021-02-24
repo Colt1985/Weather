@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Погода</string>
+    <string name="change_city">Выбор города</string>
+    <string name="default_temp">+20</string>
+    <string name="kirov">Киров</string>
+    <string name="mainly_cloudy">состояние погоды</string>
+    <string name="feels_like">Ощущается как</string>
+</resources>
