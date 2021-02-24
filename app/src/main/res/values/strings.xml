@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="change_city">Change City</string>
+    <string name="default_temp">+20</string>
+    <string name="kirov">Kirov</string>
+    <string name="mainly_cloudy">mainly_cloudy</string>
+    <string name="feels_like">feels_like</string>
+</resources>
