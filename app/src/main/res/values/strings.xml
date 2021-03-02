@@ -4,5 +4,15 @@
     <string name="default_temp">+20</string>
     <string name="kirov">Kirov</string>
     <string name="mainly_cloudy">mainly_cloudy</string>
-    <string name="feels_like">feels_like</string>
+    <string name="feels_like">feels like</string>
+
+    <string name="temperature_label">Temp</string>
+
+    <string name="feels_like_label">feels like</string>
+
+    <string name="city_coordinates">lt/ln: %s, %s"</string>
+
+    <string name="error">Error</string>
+
+    <string name="reload">Reload</string>
 </resources>
