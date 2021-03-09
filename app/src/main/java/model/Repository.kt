@@ -2,5 +2,6 @@ package model
 
 interface Repository {
     fun getWeatherServer():Weather
-    fun getWeatherFromLocalStorage():Weather
+    fun getWeatherFromLocalStorageRus(): List<Weather>
+    fun getWeatherFromLocalStorageWorld(): List<Weather>
 }
