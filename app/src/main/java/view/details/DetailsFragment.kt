@@ -1,5 +1,6 @@
 package view.details
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ class DetailsFragment : Fragment() {
 
     private var _binding: FragmentDetailsBinding? = null
     private val binding get() = _binding!!
+
     private lateinit var weatherBundle: Weather
     private val onLoadListener: WeatherLoader.WeatherLoaderListener =
         object : WeatherLoader.WeatherLoaderListener {
@@ -48,11 +50,13 @@ class DetailsFragment : Fragment() {
         loader.loadWeather()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun displayWeather(weatherDTO: WeatherDTO) {
         with(binding) {
             mainView.visibility = View.VISIBLE
             loadingLayout.visibility = View.GONE
             val city = weatherBundle.city
+            val speed = getString(R.string.ms)
             cityName.text = city.city
             cityCoordinates.text = String.format(
                 getString(R.string.city_coordinates),
@@ -62,8 +66,10 @@ class DetailsFragment : Fragment() {
             tvConditionTextView.text = weatherDTO.fact?.condition
             temperatureValue.text = weatherDTO.fact?.temp.toString()
             feelsLikeValue.text = weatherDTO.fact?.feels_like.toString()
+            val text = weatherDTO.fact?.wind_speed.toString()
+            tvWindSpeed.text = "$text $speed"
 
-            when(weatherDTO.fact?.condition){
+            when (weatherDTO.fact?.condition) {
                 "clear" -> ivIcon.setImageResource(R.drawable.clear)
                 "cloudy" -> ivIcon.setImageResource(R.drawable.cloudy)
                 "continuous-heavy-rain" -> ivIcon.setImageResource(R.drawable.snow)
@@ -83,7 +89,7 @@ class DetailsFragment : Fragment() {
                 "thunderstorm-with-hail" -> ivIcon.setImageResource(R.drawable.thunderstorm)
                 "thunderstorm-with-rain" -> ivIcon.setImageResource(R.drawable.thunderstorm)
             }
-            tvWindDir.text = when(weatherDTO.fact?.wind_dir) {
+            tvWindDir.text = when (weatherDTO.fact?.wind_dir) {
                 "nw" -> getString(R.string.nw)
                 "n" -> getString(R.string.n)
                 "ne" -> getString(R.string.ne)
@@ -93,9 +99,10 @@ class DetailsFragment : Fragment() {
                 "sw" -> getString(R.string.sw)
                 "w" -> getString(R.string.w)
                 else -> getString(R.string.c)
-        }
+            }
         }
     }
+
     override
     fun onDestroyView() {
         super.onDestroyView()

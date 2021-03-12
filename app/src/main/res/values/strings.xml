@@ -27,4 +27,8 @@
     <string name="w">western</string>
     <string name="c">calm</string>
 
+    <string name="Wind_speed">Wind speed</string>
+    <string name="ms">ms</string>
+
+
 </resources>
