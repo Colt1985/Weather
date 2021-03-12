@@ -15,4 +15,15 @@
     <string name="error">Ошибка</string>
 
     <string name="reload">Перезагрузка</string>
+
+    <string name="direction_of_the_wind">направление ветра</string>
+    <string name="nw">северо-западное</string>
+    <string name="n">северное</string>
+    <string name="ne">северо-восточное</string>
+    <string name="e">восточное</string>
+    <string name="se">юго-восточное</string>
+    <string name="s">южное</string>
+    <string name="sw">юго-западное</string>
+    <string name="w">западное</string>
+    <string name="c">штиль</string>
 </resources>

@@ -8,7 +8,7 @@ data class Weather(
     val city: City = getDefaultCity(),
     val temperature: Int = 20,
     val feelsLike: Int = 25,
-    var cloudy: String = "Mainly cloudy"
+    var cloudy: String = "partly cloudy"
 ) :Parcelable
 
 fun getDefaultCity() = City("Kirov", 58.60353,49.6668)
@@ -27,6 +27,7 @@ fun getWorldCities()= listOf(
     )
 
 fun getRussianCities() = listOf(
+        Weather(City("Киров", 58.60353,49.6668), 1, 2,"Mainly Cloudy"),
         Weather(City("Москва", 55.755826, 37.617299900000035), 1, 2,"Mainly Cloudy"),
         Weather(City("Санкт-Петербург", 59.9342802, 30.335098600000038), 3, 3,"Sunny"),
         Weather(City("Новосибирск", 55.00835259999999, 82.93573270000002), 5, 6,"Rain"),

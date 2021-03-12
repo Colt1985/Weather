@@ -15,4 +15,16 @@
     <string name="error">Error</string>
 
     <string name="reload">Reload</string>
+
+    <string name="direction_of_the_wind">Direction of the wind</string>
+    <string name="nw">northwest</string>
+    <string name="n">northern</string>
+    <string name="ne">northeastern</string>
+    <string name="e">eastern</string>
+    <string name="se">southeast</string>
+    <string name="s">southern</string>
+    <string name="sw">southwest</string>
+    <string name="w">western</string>
+    <string name="c">calm</string>
+
 </resources>
