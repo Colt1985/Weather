@@ -16,7 +16,7 @@
 
     <string name="reload">Reload</string>
 
-    <string name="direction_of_the_wind">Direction of the wind</string>
+    <string name="direction_of_the_wind">Direction of the wind:</string>
     <string name="nw">northwest</string>
     <string name="n">northern</string>
     <string name="ne">northeastern</string>
@@ -27,8 +27,10 @@
     <string name="w">western</string>
     <string name="c">calm</string>
 
-    <string name="Wind_speed">Wind speed</string>
-    <string name="ms">ms</string>
+    <string name="Wind_speed">Wind speed:</string>
+    <string name="ms">m/s</string>
+    <string name="pressure">Pressure:</string>
+    <string name="pres">mmHg</string>
 
 
 </resources>

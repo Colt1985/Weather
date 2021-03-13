@@ -16,7 +16,7 @@
 
     <string name="reload">Перезагрузка</string>
 
-    <string name="direction_of_the_wind">Направление ветра</string>
+    <string name="direction_of_the_wind">Направление ветра:</string>
     <string name="nw">северо-западное</string>
     <string name="n">северное</string>
     <string name="ne">северо-восточное</string>
@@ -27,6 +27,8 @@
     <string name="w">западное</string>
     <string name="c">штиль</string>
 
-    <string name="Wind_speed">Скорость ветра</string>
-    <string name="ms">мс</string>
+    <string name="Wind_speed">Скорость ветра:</string>
+    <string name="ms">м/с</string>
+    <string name="pressure">Давление:</string>
+    <string name="pres">мм рт.ст</string>
 </resources>

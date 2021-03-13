@@ -57,6 +57,7 @@ class DetailsFragment : Fragment() {
             loadingLayout.visibility = View.GONE
             val city = weatherBundle.city
             val speed = getString(R.string.ms)
+            val pres = getString(R.string.pres)
             cityName.text = city.city
             cityCoordinates.text = String.format(
                 getString(R.string.city_coordinates),
@@ -68,6 +69,8 @@ class DetailsFragment : Fragment() {
             feelsLikeValue.text = weatherDTO.fact?.feels_like.toString()
             val text = weatherDTO.fact?.wind_speed.toString()
             tvWindSpeed.text = "$text $speed"
+            val pressure = weatherDTO.fact?.pressure_mm.toString()
+            tvPressureMm.text = "$pressure $pres"
 
             when (weatherDTO.fact?.condition) {
                 "clear" -> ivIcon.setImageResource(R.drawable.clear)

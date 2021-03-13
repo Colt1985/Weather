@@ -50,8 +50,8 @@
         <TextView
             android:id="@+id/temperatureValue"
             style="@style/Temp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_icon"
 
-            app:layout_constraintEnd_toEndOf="@+id/feelsLikeLabel"
             app:layout_constraintTop_toBottomOf="@+id/tv_condition_text_view"
             tools:text="+20" />
 
@@ -60,8 +60,7 @@
             android:layout_width="120dp"
             android:layout_height="107dp"
             app:layout_constraintBottom_toBottomOf="@+id/temperatureValue"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/temperatureValue"
+            app:layout_constraintEnd_toStartOf="@+id/digitalClock"
             app:layout_constraintTop_toBottomOf="@+id/tv_condition_text_view"
             app:srcCompat="@drawable/clear" />
 
@@ -69,15 +68,16 @@
             android:id="@+id/feelsLikeLabel"
             style="@style/feels_like"
             android:text="@string/feels_like_label"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/temperatureValue"
+            app:layout_constraintStart_toStartOf="@+id/temperatureValue"
             app:layout_constraintTop_toBottomOf="@+id/temperatureValue" />
 
         <TextView
             android:id="@+id/feelsLikeValue"
             style="@style/feel_temperature_field"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/feelsLikeLabel"
+            app:layout_constraintStart_toStartOf="@+id/feelsLikeLabel"
             app:layout_constraintTop_toBottomOf="@+id/feelsLikeLabel"
             tools:text="-23" />
 
@@ -85,11 +85,12 @@
             android:id="@+id/tv_wind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/direction_of_the_wind"
             android:textColor="@color/black"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/iv_icon"
             app:layout_constraintStart_toStartOf="@+id/iv_icon"
-            app:layout_constraintTop_toTopOf="@+id/feelsLikeLabel"
-            android:text="@string/direction_of_the_wind" />
+            app:layout_constraintTop_toTopOf="@+id/feelsLikeLabel" />
 
         <TextView
             android:id="@+id/tv_wind_dir"
@@ -97,6 +98,7 @@
             android:layout_height="wrap_content"
             android:hint="wind"
             android:textColor="@color/black"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/tv_wind"
             app:layout_constraintStart_toStartOf="@+id/tv_wind"
             app:layout_constraintTop_toBottomOf="@+id/tv_wind" />
@@ -107,6 +109,7 @@
             android:layout_height="wrap_content"
             android:text="@string/Wind_speed"
             android:textColor="@color/black"
+            android:textSize="10sp"
             app:layout_constraintStart_toStartOf="@+id/tv_wind"
             app:layout_constraintTop_toBottomOf="@+id/tv_wind_dir" />
 
@@ -117,8 +120,30 @@
             android:layout_marginStart="8dp"
             android:hint="speed"
             android:textColor="@color/black"
+            android:textSize="10sp"
             app:layout_constraintStart_toEndOf="@+id/windspeed"
             app:layout_constraintTop_toBottomOf="@+id/tv_wind_dir" />
+
+        <TextView
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pressure"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind"
+            app:layout_constraintTop_toBottomOf="@+id/windspeed" />
+
+        <TextView
+            android:id="@+id/tv_pressure_mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="pressure"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/windspeed"
+            app:layout_constraintTop_toTopOf="@+id/pressure" />
 
         <FrameLayout
             android:id="@+id/loadingLayout"
