@@ -1,8 +1,11 @@
 package view.details
 
+import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Handler
 import android.util.Log
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.weather.BuildConfig
 import com.google.gson.Gson
@@ -18,6 +21,7 @@ import javax.net.ssl.HttpsURLConnection
 
 @RequiresApi(Build.VERSION_CODES.N)
 class WeatherLoader(private val listener: WeatherLoaderListener, private val lat: Double, private val lon: Double) {
+
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun loadWeather() {

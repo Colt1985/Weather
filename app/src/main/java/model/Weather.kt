@@ -8,7 +8,11 @@ data class Weather(
     val city: City = getDefaultCity(),
     val temperature: Int = 20,
     val feelsLike: Int = 25,
-    var cloudy: String = "partly cloudy"
+    val condition: String = "",
+    val wind_dir: String? = "",
+    val wind_speed: Double = 1.0,
+    val icon: String? = "bkn_n",
+    val pressure_mm: Int? = 700,
 ) :Parcelable
 
 fun getDefaultCity() = City("Kirov", 58.60353,49.6668)
