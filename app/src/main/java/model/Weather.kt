@@ -13,6 +13,7 @@ data class Weather(
     val wind_speed: Double = 1.0,
     val icon: String? = "bkn_n",
     val pressure_mm: Int? = 700,
+    val season: String? = ""
 ) :Parcelable
 
 fun getDefaultCity() = City("Kirov", 58.60353,49.6668)

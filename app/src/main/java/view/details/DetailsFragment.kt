@@ -102,15 +102,51 @@ class DetailsFragment : Fragment() {
                 )
                 temperatureValue.text = weather.temperature.toString()
                 feelsLikeValue.text = weather.feelsLike.toString()
-                tvConditionTextView.text = weather.condition
-                tvWindDir.text = weather.wind_dir
+                //tvConditionTextView.text = weather.condition
+                // tvWindDir.text = weather.wind_dir
                 val text = weather.wind_speed.toString()
                 tvWindSpeed.text = "$text $speed"
                 val pressure = weather.pressure_mm.toString()
                 tvPressureMm.text = "$pressure $pres"
-
-
+                tvWindDir.text = when (weather.wind_dir) {
+                    "nw" -> getString(R.string.nw)
+                    "n" -> getString(R.string.n)
+                    "ne" -> getString(R.string.ne)
+                    "e" -> getString(R.string.e)
+                    "se" -> getString(R.string.se)
+                    "s" -> getString(R.string.s)
+                    "sw" -> getString(R.string.sw)
+                    "w" -> getString(R.string.w)
+                    else -> getString(R.string.c)
+                }
+                tvConditionTextView.text = when (weather.condition) {
+                    "clear" -> getString(R.string.clear)
+                    "cloudy" -> getString(R.string.cloudy)
+                    "continuous-heavy-rain" -> getString(R.string.continuous_heavy_rain)
+                    "drizzle" -> getString(R.string.drizzle)
+                    "hail" -> getString(R.string.hail)
+                    "heavy-rain" -> getString(R.string.heavy_rain)
+                    "light-rain" -> getString(R.string.light_rain)
+                    "light-snow" -> getString(R.string.light_snow)
+                    "moderate-rain" -> getString(R.string.moderate_rain)
+                    "overcast" -> getString(R.string.overcast)
+                    "partly-cloudy" -> getString(R.string.partly_cloudy)
+                    "rain" -> getString(R.string.rain)
+                    "snow" -> getString(R.string.snow)
+                    "showers" -> getString(R.string.snowers)
+                    "snow-showers" -> getString(R.string.snow_showers)
+                    "thunderstorm" -> getString(R.string.thunderstorm)
+                    "thunderstorm-with-hail" -> getString(R.string.thunderstorm_with_hail)
+                    else -> getString(R.string.thunderstorm_with_rain)
+                }
+                tvSeason.text = when (weather.season) {
+                    "summer" -> getString(R.string.summer)
+                    "autumn" -> getString(R.string.autumn)
+                    "winter" -> getString(R.string.winter)
+                    else -> getString(R.string.spring)
+                }
             }
+
 
 //            Picasso
 //                .get()

@@ -29,14 +29,23 @@
             tools:text="Kirov" />
 
         <TextView
+            android:id="@+id/tv_season"
+            style="@style/Season"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cityName"
+            tools:text="Season" />
+
+        <TextView
             android:id="@+id/cityCoordinates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cityName"
-            tools:text="lt/ln: 55.755826, 37.617299900000035" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_season"
+            tools:text="lt/ln: 55.755826, 37.617299900000035"
+            tools:visibility="invisible" />
 
         <TextView
             android:id="@+id/tv_condition_text_view"
@@ -61,7 +70,7 @@
             android:layout_height="107dp"
             app:layout_constraintBottom_toBottomOf="@+id/temperatureValue"
             app:layout_constraintEnd_toStartOf="@+id/digitalClock"
-            app:layout_constraintTop_toBottomOf="@+id/tv_condition_text_view"
+
             app:srcCompat="@drawable/clear" />
 
         <TextView
@@ -131,7 +140,7 @@
             android:text="@string/pressure"
             android:textColor="@color/black"
             android:textSize="10sp"
-            app:layout_constraintStart_toStartOf="@+id/tv_wind"
+            app:layout_constraintEnd_toEndOf="@+id/windspeed"
             app:layout_constraintTop_toBottomOf="@+id/windspeed" />
 
         <TextView

@@ -31,4 +31,26 @@
     <string name="ms">м/с</string>
     <string name="pressure">Давление:</string>
     <string name="pres">мм рт.ст</string>
+    <string name="clear">Чистое небо</string>
+    <string name="cloudy">Облачно</string>
+    <string name="drizzle">Морось</string>
+    <string name="continuous_heavy_rain">длительный сильный дождь</string>
+    <string name="hail">Град</string>
+    <string name="heavy_rain">Сильный дождь</string>
+    <string name="light_rain">Небольшой дождь</string>
+    <string name="light_snow">Небольшой снег</string>
+    <string name="moderate_rain">Умеренно сильный дождь</string>
+    <string name="overcast">Пасмурно</string>
+    <string name="partly_cloudy">Малооблачно</string>
+    <string name="rain">Дождь</string>
+    <string name="snow">Снег</string>
+    <string name="snowers">Ливень</string>
+    <string name="snow_showers">Снегопад</string>
+    <string name="thunderstorm">Гроза</string>
+    <string name="thunderstorm_with_hail">Гроза с градом</string>
+    <string name="thunderstorm_with_rain">Гроза с дождем</string>
+    <string name="summer">Лето</string>
+    <string name="autumn">Осень</string>
+    <string name="winter">Зима</string>
+    <string name="spring">Весна</string>
 </resources>

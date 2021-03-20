@@ -11,5 +11,6 @@ data class FactDTO(
     val wind_dir: String?,
     val wind_speed: Double?,
     val pressure_mm: Int?,
-    val icon: String
+    val icon: String,
+    val season: String
 )
