@@ -53,4 +53,6 @@
     <string name="autumn">Осень</string>
     <string name="winter">Зима</string>
     <string name="spring">Весна</string>
+    <string name="content_provider">Контент провайдер</string>
+    <string name="menu_title_history">История</string>
 </resources>

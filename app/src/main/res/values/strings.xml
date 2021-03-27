@@ -54,5 +54,8 @@
     <string name="winter">Winter</string>
     <string name="spring">Spring</string>
 
+    <string name="content_provider">Content provider</string>
+    <string name="menu_title_history">history</string>
+
 
 </resources>

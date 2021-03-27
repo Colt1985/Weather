@@ -9,15 +9,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.androidwithkotlin.utils.showSnackBar
+import utils.showSnackBar
 import com.example.androidwithkotlin.viewmodel.DetailsViewModel
 import com.example.weather.R
 import com.example.weather.databinding.FragmentDetailsBinding
 import model.Weather
 import viewmodel.AppState
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou
-import com.squareup.picasso.Picasso
-import model.WeatherDTO
 
 
 class DetailsFragment : Fragment() {
