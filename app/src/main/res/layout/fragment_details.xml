@@ -170,7 +170,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
 
-
+            <include
+                android:id="@+id/includedLoadingLayout"
+                layout="@layout/loading_layout" />
         </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

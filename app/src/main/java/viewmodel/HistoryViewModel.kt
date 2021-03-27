@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import app.App.Companion.getHistoryDao
 import repository.LocalRepositoryImpl
-import viewmodel.AppState
+import app.AppState
 
 class HistoryViewModel(
     val historyLiveData: MutableLiveData<AppState> = MutableLiveData(),

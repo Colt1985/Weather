@@ -9,11 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.weather.R
 import com.example.weather.databinding.FragmentMainBinding
-import com.example.weather.databinding.MainFragmentBinding
 import com.google.android.material.snackbar.Snackbar
 import model.Weather
 import view.details.DetailsFragment
-import viewmodel.AppState
+import app.AppState
 import viewmodel.MainViewModel
 
 class MainFragment : Fragment() {

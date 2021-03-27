@@ -1,4 +1,4 @@
-package viewmodel
+package app
 
 import model.Weather
 

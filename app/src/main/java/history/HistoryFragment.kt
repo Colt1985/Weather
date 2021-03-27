@@ -12,7 +12,7 @@ import viewmodel.HistoryViewModel
 import com.example.weather.R
 import com.example.weather.databinding.FragmentHistoryBinding
 import kotlinx.android.synthetic.main.fragment_history.*
-import viewmodel.AppState
+import app.AppState
 
 class HistoryFragment : Fragment() {
 
