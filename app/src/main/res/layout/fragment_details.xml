@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/base">
+
+        <DigitalClock
+            android:id="@+id/digitalClock"
+            style="@style/Digital_clock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cityName"
+            style="@style/City"
+            android:layout_marginTop="50dp"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Kirov" />
+
+        <TextView
+            android:id="@+id/tv_season"
+            style="@style/Season"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cityName"
+            tools:text="Season" />
+
+        <TextView
+            android:id="@+id/cityCoordinates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_season"
+            tools:text="lt/ln: 55.755826, 37.617299900000035"
+            tools:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_condition_text_view"
+            style="@style/Cloudy"
+            android:text="@string/mainly_cloudy"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cityCoordinates" />
+
+
+        <TextView
+            android:id="@+id/temperatureValue"
+            style="@style/Temp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_icon"
+
+            app:layout_constraintTop_toBottomOf="@+id/tv_condition_text_view"
+            tools:text="+20" />
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="120dp"
+            android:layout_height="107dp"
+            app:layout_constraintBottom_toBottomOf="@+id/temperatureValue"
+            app:layout_constraintEnd_toStartOf="@+id/digitalClock"
+
+            app:srcCompat="@drawable/clear" />
+
+        <TextView
+            android:id="@+id/feelsLikeLabel"
+            style="@style/feels_like"
+            android:text="@string/feels_like_label"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/temperatureValue"
+            app:layout_constraintStart_toStartOf="@+id/temperatureValue"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureValue" />
+
+        <TextView
+            android:id="@+id/feelsLikeValue"
+            style="@style/feel_temperature_field"
+            app:layout_constraintEnd_toEndOf="@+id/feelsLikeLabel"
+            app:layout_constraintStart_toStartOf="@+id/feelsLikeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/feelsLikeLabel"
+            tools:text="-23" />
+
+        <TextView
+            android:id="@+id/tv_wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direction_of_the_wind"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_icon"
+            app:layout_constraintStart_toStartOf="@+id/iv_icon"
+            app:layout_constraintTop_toTopOf="@+id/feelsLikeLabel" />
+
+        <TextView
+            android:id="@+id/tv_wind_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="wind"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_wind"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wind" />
+
+        <TextView
+            android:id="@+id/windspeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Wind_speed"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wind_dir" />
+
+        <TextView
+            android:id="@+id/tv_wind_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="speed"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/windspeed"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wind_dir" />
+
+        <TextView
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pressure"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/windspeed"
+            app:layout_constraintTop_toBottomOf="@+id/windspeed" />
+
+        <TextView
+            android:id="@+id/tv_pressure_mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="pressure"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/windspeed"
+            app:layout_constraintTop_toTopOf="@+id/pressure" />
+
+        <FrameLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loadingBackground"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:visibility="gone">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <include
+                android:id="@+id/includedLoadingLayout"
+                layout="@layout/loading_layout" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+
