@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import app.googlemaps.GoogleMapsFragment
 import view.experiments.ContentProviderFragment
 import com.example.weather.R
 import com.example.weather.databinding.MainActivityBinding
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+        binding = MainActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         if(savedInstanceState == null){
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, MainFragment.newInstance())
@@ -48,10 +50,10 @@ class MainActivity : AppCompatActivity() {
                     }
                     true
                 }
-                R.id.menu_content_provider -> {
+                R.id.menu_google_maps -> {
                     supportFragmentManager.apply {
                         beginTransaction()
-                            .add(R.id.container, ContentProviderFragment.newInstance())
+                            .add(R.id.container, GoogleMapsFragment.newInstance())
                             .addToBackStack("")
                             .commitAllowingStateLoss()
                     }
